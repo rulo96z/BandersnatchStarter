@@ -35,7 +35,7 @@ class Database:
         db_name = getenv("DB_NAME")
         collection_name = getenv("COLLECTION_NAME")
 
-        self.client = MongoClient(db_url)
+        self.client = MongoClient(db_url, tlsCAFile=where())
         self.db = self.client[db_name]
         self.collection = self.db[collection_name]
 
@@ -94,6 +94,7 @@ class Database:
         return df.to_html(index=True)
 
 
+'''This is to populate the data in the DB and reset it'''
 #if __name__ == '__main__':
     #db = Database()
     #db.seed(1000)
