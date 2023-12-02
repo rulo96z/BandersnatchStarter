@@ -79,7 +79,7 @@ class Database:
         df = DataFrame(data)
 
         # Drop '_id' column for visualization purposes
-        df = df.drop("_id", axis=1)
+        df = df.drop("_id", axis=1) # self.collection.find({}, {“_id”: False})
         return df
 
 

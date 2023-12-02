@@ -20,6 +20,9 @@ python-dotenv = "*"
 scikit-learn = "*"
 scipy = "*"
 altair-viewer = "*"
+imbalanced-learn = "*"
+xgboost = "*"
+matplotlib = "*"
 
 [dev-packages]
 
